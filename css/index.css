@@ -1,0 +1,78 @@
+* {
+   padding: 0;
+   margin: 0;
+   font-family: sans-serif;
+}
+
+.navbar {
+   position: absolute;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   background-color: transparent;
+}
+
+.navbar-list {
+   display: flex;
+   list-style-type: none;
+   margin-left: auto;
+   justify-content: flex-end;
+}
+
+.navbar-brand, .navbar-item {
+   padding: 2rem;
+}
+
+.navbar-brand, .navbar-item a, .callToActionBtns a {
+   text-decoration: none;
+   color: white;
+}
+
+.welcome {
+   color: white;
+   position: relative;
+   background-size: cover;
+   width: 100%;
+   height: 100vh;
+   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/close-up-code-coding-160107.jpg");
+   z-index: -5;
+}
+
+.welcome h1 {
+   position: absolute;
+   font-size: 4rem;
+   font-weight: 100;
+   top: 40%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.welcome footer {
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   padding: 2rem;
+   transform: translate(-50%, 0);
+   text-align: center;
+}
+
+.callToActionBtns {
+   position: absolute;
+   top: 60%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.callToActionBtns a {
+   padding: 1em;
+   border: 1px solid white;
+   text-transform: uppercase;
+}
+
+.callToActionBtns a:hover {
+   background-color: white;
+}
+
+footer p {
+   font-size: 14px;
+}
