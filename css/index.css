@@ -1,17 +1,33 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 * {
    padding: 0;
    margin: 0;
-   font-family: 'Raleway';
+   font-family: 'Montserrat', sans-serif;
+   overflow-x: hidden;
+}
+
+a {
+   color: orange;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+section { 
+   justify-content: center; 
+   align-items: center;
+   align-content: center;
+   margin: auto;
 }
 
 .navbar {
    position: absolute;
    width: 100%;
    display: flex;
+   flex-wrap: wrap;
    align-items: center;
    background-color: transparent;
+   z-index: 1;
 }
 
 .navbar-list {
@@ -22,7 +38,8 @@
 }
 
 .navbar-brand, .navbar-item {
-   padding: 2rem;
+   padding: 2em;
+   font-size: 1.5em;
 }
 
 .navbar-brand, .navbar-item a, .callToActionBtns a {
@@ -36,46 +53,161 @@
    background-size: cover;
    width: 100%;
    height: 100vh;
-   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/close-up-code-coding-160107.jpg");
-   z-index: -5;
+   background-image: linear-gradient(rgba(30, 144, 255, 0.8), rgba(30, 144, 255, 0.8)), url("../images/waves.gif");
 }
 
 .welcome h1 {
    position: absolute;
-   font-size: 4rem;
+   font-size: 7em;
    font-weight: 100;
-   top: 40%;
+   top: 25%;
    left: 50%;
    transform: translate(-50%, -50%);
 }
 
-.welcome footer {
+.welcome img {
    position: absolute;
-   bottom: 0;
+   top: 50%;
    left: 50%;
-   padding: 2rem;
-   transform: translate(-50%, 0);
-   text-align: center;
+   height: 30vh;
+   transform: translate(-50%, -50%);
 }
 
-.callToActionBtns {
+.welcome p {
    position: absolute;
-   top: 60%;
+   font-size: 2em;
+   font-weight: 100;
+   text-align: center;
+   top: 70%;
    left: 50%;
    transform: translate(-50%, -50%);
 }
 
 .btn {
-   padding: 1em;
-   border: 1px solid white;
+   padding: 2em;
+   margin: 2em 0 2em 0;
+   font-size: 1.5em;
    text-transform: uppercase;
+   border: none;
+   border-radius: 50px;
+   color: white;
+   cursor: pointer;
+   font-weight: 600;
+   background-color: #ff9f43;
 }
 
-/* .btn:hover {
-   background-color: white;
-   color: black;
-} */
+.btn:hover {
+   background-color: darkorange;
+}
+
+.get-started-btn {
+   position: absolute;
+   top: 80%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.about-me, .technology, .projects, .contact {
+   padding: 7em 0 7em 0;
+   text-align: center;
+   width: 50%;
+}
+
+.text {
+   padding: 1em;
+   font-size: 1.5em;
+   line-height: 200%;
+}
+
+.title {
+   font-size: 3em;
+   margin: 0 0 1.3em 0;
+}
+
+.tech-list i {
+   font-size: 10em;
+   margin: 1rem;
+}
+
+.technology i:hover {
+   transform: scale(1.1);
+}
+
+.projects {
+   color: white;
+   background-color: #1e90ff;
+   width: 100%;
+}
+
+.project-list {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   padding: 3em;
+   justify-content: space-evenly;
+
+}
+
+.project-item {
+   width: 20%;
+   height: 30vh;
+   border-radius: 35px;
+}
+
+.project-item:hover {
+   /* Blur and show info card. */
+}
+
+.project-logos {
+   position: relative;
+   width: 75%;
+   top: 35%;
+}
+
+.project-item h1 {
+   position: relative;
+   top: 50%;
+}
+
+#cbch {
+   background-size: cover;
+   background-image: linear-gradient(rgba(5, 196, 107, 0.8), rgba(5, 196, 107, 0.8)), url("../images/close-up-code-coding-160107.jpg");
+}
+
+#cougarcs {
+   background-size: cover;
+   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/uh.jpg")
+}
+
+footer {
+   color: white;
+   background: #1e90ff;
+   margin-top: 3em;
+}
 
 footer p {
-   font-size: 14px;
+   font-size: 1.2em;
+   text-align: center;
+   padding: 5em;
+}
+
+@media screen and (max-width: 430px) {
+   .navbar { display: none; }
+   .welcome h1 { font-size: 2rem; }
+   .welcome p { font-size: 1.25rem; }
+   .welcome img { height: 20vh; }
+   .btn {
+      padding: 1em;
+      font-size: 1em;
+   }
+   .about-me, .technology, .projects, .contact { padding: 4em 0 4em 0; }
+   .about-me, .technology, .contact { width: 90%; }
+   .projects { width: 100%; }
+   .title { font-size: 2rem; }
+   .text { font-size: 1rem; }
+   .tech-list i { font-size: 5em; }
+   .project-item {
+      width: 90%;
+      margin-top: 10%;
+   }
 }
