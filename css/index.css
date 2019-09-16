@@ -58,7 +58,7 @@ section {
 
 .welcome h1 {
    position: absolute;
-   font-size: 7em;
+   font-size: 4em;
    font-weight: 100;
    top: 25%;
    left: 50%;
@@ -84,7 +84,7 @@ section {
 }
 
 .btn {
-   padding: 2em;
+   padding: 1.3em;
    margin: 2em 0 2em 0;
    font-size: 1.5em;
    text-transform: uppercase;
@@ -115,7 +115,8 @@ section {
 
 .text {
    padding: 1em;
-   font-size: 1.5em;
+   font-size: 1.4em;
+   font-weight: 0;
    line-height: 200%;
 }
 
@@ -154,9 +155,9 @@ section {
    border-radius: 35px;
 }
 
-.project-item:hover {
-   /* Blur and show info card. */
-}
+/* .project-item:hover {
+   Blur and show info card.
+} */
 
 .project-logos {
    position: relative;
