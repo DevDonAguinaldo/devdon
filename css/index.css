@@ -26,6 +26,7 @@ section {
    display: flex;
    flex-wrap: wrap;
    align-items: center;
+   justify-content: space-between;
    background-color: transparent;
    z-index: 1;
 }
@@ -33,16 +34,14 @@ section {
 .navbar-list {
    display: flex;
    list-style-type: none;
-   margin-left: auto;
-   justify-content: flex-end;
 }
 
 .navbar-brand, .navbar-item {
    padding: 2em;
-   font-size: 1.5em;
+   font-size: 1.1em;
 }
 
-.navbar-brand, .navbar-item a, .callToActionBtns a {
+.navbar-brand, .navbar-item a {
    text-decoration: none;
    color: white;
 }
@@ -53,12 +52,12 @@ section {
    background-size: cover;
    width: 100%;
    height: 100vh;
-   background-image: linear-gradient(rgba(30, 144, 255, 0.8), rgba(30, 144, 255, 0.8)), url("../images/waves.gif");
+   background-image: linear-gradient(to right, rgba(247, 183, 49, 0.9), rgba(229, 80, 57, 0.9)), url("../images/waves.gif");
 }
 
 .welcome h1 {
    position: absolute;
-   font-size: 4em;
+   font-size: 2.5em;
    font-weight: 100;
    top: 40%;
    left: 50%;
@@ -67,7 +66,7 @@ section {
 
 .welcome p {
    position: absolute;
-   font-size: 2em;
+   font-size: 1.2em;
    font-weight: 100;
    text-align: center;
    top: 55%;
@@ -78,18 +77,15 @@ section {
 .btn {
    padding: 1.3em;
    margin: 2em 0 2em 0;
-   font-size: 1.5em;
+   font-size: 1.2em;
+   letter-spacing: 2px;
    text-transform: uppercase;
    border: none;
    border-radius: 50px;
    color: white;
    cursor: pointer;
    font-weight: 600;
-   background-color: #ff9f43;
-}
-
-.btn:hover {
-   background-color: darkorange;
+   background: linear-gradient(to right, #4b7bec, #a55eea);
 }
 
 .get-started-btn {
@@ -100,21 +96,28 @@ section {
 }
 
 .about-me, .technology, .projects, .contact {
-   padding: 7em 0 7em 0;
+   padding: 5em 0 5em 0;
    text-align: center;
    width: 50%;
 }
 
+.about-me img {
+   margin: 3em 0 3em 0;
+   width: 70%;
+   height: 50%;
+}
+
 .text {
    padding: 1em;
-   font-size: 1.4em;
+   letter-spacing: 1px;
+   font-size: 1em;
    font-weight: 0;
    line-height: 200%;
 }
 
 .title {
-   font-size: 3em;
-   margin: 0 0 1.3em 0;
+   font-size: 2em;
+   margin: 0 0 1em 0;
 }
 
 .tech-list i {
@@ -126,9 +129,17 @@ section {
    transform: scale(1.1);
 }
 
+.other-tech h4 {
+   padding: 2em 0 2em 0;
+} 
+
+.other-tech li {
+   padding: 0.5em 0 0.5em 0;
+}
+
 .projects {
    color: white;
-   background-color: #1e90ff;
+   background: linear-gradient(to right, rgba(247, 183, 49, 1), rgba(229, 80, 57, 1));
    width: 100%;
 }
 
@@ -146,10 +157,6 @@ section {
    height: 30vh;
    border-radius: 35px;
 }
-
-/* .project-item:hover {
-   Blur and show info card.
-} */
 
 .project-logos {
    position: relative;
@@ -174,12 +181,12 @@ section {
 
 footer {
    color: white;
-   background: #1e90ff;
+   background: linear-gradient(to right, rgba(247, 183, 49, 1), rgba(229, 80, 57, 1));
    margin-top: 3em;
 }
 
 footer p {
-   font-size: 1.2em;
+   font-size: 1em;
    text-align: center;
    padding: 5em;
 }
