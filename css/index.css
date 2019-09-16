@@ -60,16 +60,8 @@ section {
    position: absolute;
    font-size: 4em;
    font-weight: 100;
-   top: 25%;
+   top: 40%;
    left: 50%;
-   transform: translate(-50%, -50%);
-}
-
-.welcome img {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   height: 30vh;
    transform: translate(-50%, -50%);
 }
 
@@ -78,7 +70,7 @@ section {
    font-size: 2em;
    font-weight: 100;
    text-align: center;
-   top: 70%;
+   top: 55%;
    left: 50%;
    transform: translate(-50%, -50%);
 }
@@ -102,7 +94,7 @@ section {
 
 .get-started-btn {
    position: absolute;
-   top: 80%;
+   top: 70%;
    left: 50%;
    transform: translate(-50%, -50%);
 }
@@ -195,8 +187,7 @@ footer p {
 @media screen and (max-width: 430px) {
    .navbar { display: none; }
    .welcome h1 { font-size: 2rem; }
-   .welcome p { font-size: 1.25rem; }
-   .welcome img { height: 20vh; }
+   .welcome p { font-size: 1.1rem; }
    .btn {
       padding: 1em;
       font-size: 1em;
@@ -204,11 +195,12 @@ footer p {
    .about-me, .technology, .projects, .contact { padding: 4em 0 4em 0; }
    .about-me, .technology, .contact { width: 90%; }
    .projects { width: 100%; }
-   .title { font-size: 2rem; }
+   .title { font-size: 1.5rem; }
    .text { font-size: 1rem; }
    .tech-list i { font-size: 5em; }
    .project-item {
       width: 90%;
       margin-top: 10%;
    }
+   footer p { font-size: 1em; }
 }
