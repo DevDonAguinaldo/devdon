@@ -8,7 +8,7 @@
 }
 
 a {
-   color: orange;
+   color: #a55eea;
    text-decoration: none;
    cursor: pointer;
 }
@@ -32,7 +32,8 @@ section {
 }
 
 .navbar-list {
-   display: flex;
+   display: flex; 
+   display: none;
    list-style-type: none;
 }
 
@@ -44,6 +45,19 @@ section {
 .navbar-brand, .navbar-item a {
    text-decoration: none;
    color: white;
+}
+
+.navbar-toggle {
+   position: absolute;
+   top: 10px;
+   right: 20px;
+   cursor: pointer; 
+   color: rgba(255,255,255,0.8);
+   font-size: 24px;
+}
+
+.active {
+   display: block;
 }
 
 .welcome {
@@ -191,8 +205,9 @@ footer p {
    padding: 5em;
 }
 
-@media screen and (max-width: 430px) {
-   .navbar { display: none; }
+@media screen and (max-width: 430px) { 
+   .navbar .navbar-list:not(:last-child) { display: none; }
+   .navbar .navbar-list .navbar-item .icon { display: block; }
    .welcome h1 { font-size: 2rem; }
    .welcome p { font-size: 1.1rem; }
    .btn {
@@ -202,12 +217,12 @@ footer p {
    .about-me, .technology, .projects, .contact { padding: 4em 0 4em 0; }
    .about-me, .technology, .contact { width: 90%; }
    .projects { width: 100%; }
-   .title { font-size: 1.5rem; }
-   .text { font-size: 1rem; }
+   .title { font-size: 1.2rem; }
+   .text { font-size: 0.8em; }
    .tech-list i { font-size: 5em; }
    .project-item {
       width: 90%;
       margin-top: 10%;
    }
-   footer p { font-size: 1em; }
+   footer p { font-size: 0.5em; }
 }
