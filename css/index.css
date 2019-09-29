@@ -1,228 +1,282 @@
+/* 
+* PRIMARY COLOR: #2ecc71 - Emerald Green
+*/
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 * {
-   padding: 0;
-   margin: 0;
-   font-family: 'Montserrat', sans-serif;
-   overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
 }
 
 a {
-   color: #a55eea;
-   text-decoration: none;
-   cursor: pointer;
+  color: #a55eea;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav {
+  opacity: 0;
+  animation: 1s fadein 0.2s forwards;
 }
 
 section { 
-   justify-content: center; 
-   align-items: center;
-   align-content: center;
-   margin: auto;
+  justify-content: center; 
+  align-items: center;
+  align-content: center;
+  margin: auto;
 }
 
 .navbar {
-   position: absolute;
-   width: 100%;
-   display: flex;
-   flex-wrap: wrap;
-   align-items: center;
-   justify-content: space-between;
-   background-color: transparent;
-   z-index: 1;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  z-index: 1;
 }
 
 .navbar-list {
-   display: flex; 
-   display: none;
-   list-style-type: none;
+  display: flex; 
+  list-style-type: none;
 }
 
 .navbar-brand, .navbar-item {
-   padding: 2em;
-   font-size: 1.1em;
+  padding: 2em;
+  font-size: 1.4rem;
 }
 
 .navbar-brand, .navbar-item a {
-   text-decoration: none;
-   color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .navbar-toggle {
-   position: absolute;
-   top: 10px;
-   right: 20px;
-   cursor: pointer; 
-   color: rgba(255,255,255,0.8);
-   font-size: 24px;
-}
-
-.active {
-   display: block;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer; 
+  color: rgba(255,255,255,0.8);
+  font-size: 24px;
 }
 
 .welcome {
-   color: white;
-   position: relative;
-   background-size: cover;
-   width: 100%;
-   height: 100vh;
-   background-image: linear-gradient(to right, rgba(247, 183, 49, 0.9), rgba(229, 80, 57, 0.9)), url("../images/waves.gif");
+  color: white;
+  position: relative;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(46, 204, 113, 0.7), rgba(46, 204, 113, 0.7)), url("../images/code-cloud.png");
 }
 
 .welcome h1 {
-   position: absolute;
-   font-size: 2.5em;
-   font-weight: 100;
-   top: 40%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+  position: absolute;
+  font-size: 4em;
+  font-weight: 100;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .welcome p {
-   position: absolute;
-   font-size: 1.2em;
-   font-weight: 100;
-   text-align: center;
-   top: 55%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+  position: absolute;
+  font-size: 1.5em;
+  font-weight: 100;
+  text-align: center;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.welcome h1, .welcome p {
+  margin-top: 100px;
+  opacity: 0;
+  animation: 0.5s slidein-bottom 0.2s forwards;
+}
+
+.welcome a {
+  transform: translate(-50%, -50%) scale(0);
+  animation: 0.5s popup 1s forwards;
 }
 
 .btn {
-   padding: 1.3em;
-   margin: 2em 0 2em 0;
-   font-size: 1.2em;
-   letter-spacing: 2px;
-   text-transform: uppercase;
-   border: none;
-   border-radius: 50px;
-   color: white;
-   cursor: pointer;
-   font-weight: 600;
-   background: linear-gradient(to right, #4b7bec, #a55eea);
+  padding: 1.3em;
+  margin: 2em 0 2em 0;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  background: #712ECC;
 }
 
 .get-started-btn {
-   position: absolute;
-   top: 70%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .about-me, .technology, .projects, .contact {
-   padding: 5em 0 5em 0;
-   text-align: center;
-   width: 50%;
+  padding: 5em 0 5em 0;
+  text-align: center;
+  width: 50%;
 }
 
 .about-me img {
-   margin: 3em 0 3em 0;
-   width: 70%;
-   height: 50%;
+  margin: 3em 0 3em 0;
+  width: 50%;
+  height: 40%;
 }
 
 .text {
-   padding: 1em;
-   letter-spacing: 1px;
-   font-size: 1em;
-   font-weight: 0;
-   line-height: 200%;
+  padding: 1em;
+  font-size: 1.3rem;
+  font-weight: 0;
+  line-height: 200%;
 }
 
 .title {
-   font-size: 2em;
-   margin: 0 0 1em 0;
+  font-size: 2rem;
+  margin: 0 0 1.2em 0;
 }
 
 .tech-list i {
-   font-size: 10em;
-   margin: 1rem;
+  font-size: 10rem;
+  margin: 1rem;
 }
 
 .technology i:hover {
-   transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .other-tech h4 {
-   padding: 2em 0 2em 0;
+  padding: 2em 0 2em 0;
 } 
 
 .other-tech li {
-   padding: 0.5em 0 0.5em 0;
+  padding: 0.5em 0 0.5em 0;
 }
 
 .projects {
-   color: white;
-   background: linear-gradient(to right, rgba(247, 183, 49, 1), rgba(229, 80, 57, 1));
-   width: 100%;
+  color: white;
+  background-color: #2ecc71;
+  width: 100%;
 }
 
 .project-list {
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   padding: 3em;
-   justify-content: space-evenly;
-
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 3em;
+  justify-content: space-evenly;
 }
 
 .project-item {
-   width: 20%;
-   height: 30vh;
-   border-radius: 35px;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 260px;
+  max-width: 500px;
+  width: 100%;
+  background: #000000;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 
 .project-logos {
-   position: relative;
-   width: 75%;
-   top: 35%;
+  position: relative;
+  width: 75%;
+  top: 35%;
 }
 
 .project-item h1 {
-   position: relative;
-   top: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 2rem;
+  transform: translate(-50%, -50%);
+  opacity: 0;
 }
 
-#cbch {
-   background-size: cover;
-   background-image: linear-gradient(rgba(5, 196, 107, 0.8), rgba(5, 196, 107, 0.8)), url("../images/close-up-code-coding-160107.jpg");
+.project-item * {
+  box-sizing: border-box;
 }
 
-#cougarcs {
-   background-size: cover;
-   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/uh.jpg")
+.project-item img {
+  max-width: 100%;
+  vertical-align: top;
+  height: 320px;
+}
+
+.project-item.green {
+  background-color: green;
+}
+
+.project-item img:hover {
+  opacity: 0.3;
+  filter: grayscale(100%);
+}
+
+.project-item * {
+  transition: all 0.2s ease-in-out;
 }
 
 footer {
-   color: white;
-   background: linear-gradient(to right, rgba(247, 183, 49, 1), rgba(229, 80, 57, 1));
-   margin-top: 3em;
+  color: white;
+  background-color: #2ecc71;
+  margin-top: 3em;
 }
 
 footer p {
-   font-size: 1em;
-   text-align: center;
-   padding: 5em;
+  font-size: 1em;
+  text-align: center;
+  padding: 5em;
 }
 
-@media screen and (max-width: 430px) { 
-   .navbar .navbar-list:not(:last-child) { display: none; }
-   .navbar .navbar-list .navbar-item .icon { display: block; }
-   .welcome h1 { font-size: 2rem; }
-   .welcome p { font-size: 1.1rem; }
-   .btn {
-      padding: 1em;
-      font-size: 1em;
-   }
-   .about-me, .technology, .projects, .contact { padding: 4em 0 4em 0; }
-   .about-me, .technology, .contact { width: 90%; }
-   .projects { width: 100%; }
-   .title { font-size: 1.2rem; }
-   .text { font-size: 0.8em; }
-   .tech-list i { font-size: 5em; }
-   .project-item {
-      width: 90%;
-      margin-top: 10%;
-   }
-   footer p { font-size: 0.5em; }
+@keyframes fadein {
+  100% { opacity: 1; }
+}
+
+@keyframes slidein-bottom {
+  100% { 
+    margin: 0;
+    opacity: 1; 
+  }
+}
+
+@keyframes popup {
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+@media screen and (max-width: 555px) { 
+  .navbar .navbar-list:not(:last-child) { display: none; }
+  .navbar .navbar-list .navbar-item .icon { display: block; }
+  .welcome h1 { font-size: 2rem; }
+  .welcome p { font-size: 1.1rem; }
+  .btn {
+    padding: 1em;
+    font-size: 1em;
+  }
+  .about-me, .technology, .projects, .contact { padding: 4em 0 4em 0; }
+  .about-me, .technology, .contact { width: 90%; }
+  .projects { width: 100%; }
+  .title { font-size: 1.2rem; }
+  .text { font-size: 0.8em; }
+  .tech-list i { font-size: 5em; }
+  .project-item {
+    width: 90%;
+    margin-top: 10%;
+  }
+  .other-tech { font-size: 0.6rem; }
+  footer p { font-size: 0.5em; }
 }
