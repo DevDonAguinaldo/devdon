@@ -18,51 +18,11 @@ a {
   cursor: pointer;
 }
 
-nav {
-  opacity: 0;
-  animation: 1s fadein 0.2s forwards;
-}
-
 section { 
   justify-content: center; 
   align-items: center;
   align-content: center;
   margin: auto;
-}
-
-.navbar {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  background-color: transparent;
-  z-index: 1;
-}
-
-.navbar-list {
-  display: flex; 
-  list-style-type: none;
-}
-
-.navbar-brand, .navbar-item {
-  padding: 2em;
-  font-size: 1.4rem;
-}
-
-.navbar-brand, .navbar-item a {
-  text-decoration: none;
-  color: white;
-}
-
-.navbar-toggle {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  cursor: pointer; 
-  color: rgba(255,255,255,0.8);
-  font-size: 24px;
 }
 
 .welcome {
@@ -77,7 +37,7 @@ section {
 
 .welcome h1 {
   position: absolute;
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 100;
   top: 40%;
   left: 50%;
@@ -124,6 +84,11 @@ section {
   top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.btn:hover, .get-started-btn:hover {
+  background-color: orange;
+  color: white;
 }
 
 .about-me, .technology, .projects, .contact {
