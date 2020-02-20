@@ -25,6 +25,14 @@ section {
   margin: auto;
 }
 
+.navbar-brand {
+  margin-left: 9em;
+}
+
+.nav-item {
+  margin-right: 9em;
+}
+
 .welcome {
   color: white;
   position: relative;
@@ -222,6 +230,11 @@ footer p {
 
 @keyframes popup {
   100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+@media screen and (max-width: 990px) {
+  .navbar-brand { margin-left: 0; }
+  .navbar-item { margin-right: 0; }
 }
 
 @media screen and (max-width: 600px) { 
